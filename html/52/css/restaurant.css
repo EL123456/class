@@ -1,0 +1,50 @@
+html {
+  background-color: black;
+}
+
+body {
+  color: white;
+}
+
+header {
+  text-align: center;
+  border: 4px dashed green;
+  /*border-width: 20px;
+  border-color: red;
+  border-style: groove;
+  border-bottom-width: 40px;*/
+  border-radius: 16px;
+
+
+}
+
+header h1 {
+  font-style: italic;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: gray;
+}
+
+a:hover {
+  color: green;
+}
+
+a:focus {
+  color: yellow;
+}
+
+a:active {
+  color: red;
+}
+
+article {
+  border-top-style: inset;
+  border-width: 1px;
+  margin-top: 1em;
+}
