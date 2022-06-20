@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* universal selector */
+      * {
+        box-sizing: border-box;
+      }
+
+      /* type selector */
+      section {
+        margin-left: 2em;
+      }
+
+      /* id selector */
+      #theOne {
+        color: red;
+      }
+
+      /* class selector */
+      .special {
+        font-style: italic;
+      }
+
+      /* multiple selectors separated by comma */
+      .special,
+      p {
+        color: blue;
+      }
+
+      /* section that is special */
+      section.special {
+        font-family: cursive;
+      }
+
+      /* descendant selector - p in a section */
+      section p {
+        color: green;
+      }
+
+      /* univeral selector as descendent selector - anything inside a section */
+      section * {
+        background-color: lightblue;
+      }
+
+      /* immediate child selector */
+      section>p {
+        text-decoration: underline;
+      }
+
+      /* sibling selectors*/
+      /* + means immediate next sibling */
+      section+p {
+        transform: rotate(7deg);
+      }
+
+      /* ~ means even not immediate next sibling */
+      section~p {
+        border: 1px dotted red;
+      }
+
+      /* pseudo-class selector */
+      section:hover {
+        background-color: lightgreen;
+      }
+
+      /* pseudo-element selector */
+      .special::first-letter {
+        font-size: 2em;
+      }
+
+      section::first-line {
+        font-size: 1.5em;
+      }
+
+      /* not selector */
+      section:not(.special) {
+        text-shadow: 0 0 2em red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="special">Selectors</h1>
+    <section>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam animi eos, accusantium repellendus minus
+      eaque aliquam exercitationem laborum earum. Accusantium nemo aut perspiciatis fugiat corrupti.</section>
+    <section id="theOne">Laboriosam modi similique dolorem doloremque culpa ex alias excepturi optio dolore enim
+      quaerat, debitis
+      consequuntur unde perspiciatis quasi sequi eveniet quae earum sed voluptates. Nostrum!</section>
+    <section class="special">Cupiditate dolorum sequi eos facere, omnis repellat pariatur. Repudiandae amet voluptatibus
+      tempore sequi,
+      repellendus exercitationem eius impedit ut libero excepturi dolores cum quis quas aliquid.</section>
+    <section>Velit, quidem? Possimus odit officia maiores, nam, quaerat nobis pariatur natus, nulla corporis harum sequi
+      quo molestiae dolorum! Nisi possimus delectus earum temporibus soluta rerum?</section>
+    <section>Doloremque odit maxime autem molestiae possimus vero eligendi quos error quisquam nam, aliquam recusandae
+      architecto ipsa labore. Vero quidem voluptate delectus voluptatum itaque maiores id!
+      <p>Im a p in a section</p>
+      <div>Im a div in a section
+        <p>Im a p in a div in a section</p>
+      </div>
+    </section>
+
+    <p>Im a p after a section</p>
+
+    <p>Im another p after the sections</p>
+  </body>
+
+</html>
