@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      ul {
+        list-style-type: none;
+      }
+
+      a {
+        background-repeat: no-repeat;
+        height: 64px;
+        display: inline-block;
+        padding-left: 72px;
+      }
+
+      /*a[href="docs/resume.docx"] {
+        background-image: url("images/word.jpg");
+      }*/
+
+      /* * = contains
+      a[href*=".doc"] {
+        background-image: url("images/word.jpg");
+      }*/
+
+      /* $ = ends with
+      a[href$=".doc"], a[href$=".docx"] {
+        background-image: url("images/word.jpg");
+      }*/
+
+      /* ^ = starts with */
+      a[href^="docs"] {
+        background-image: url("images/word.jpg");
+      }
+
+      a[pcs="5"] {
+        font-size: 2em;
+      }
+
+      a[pcs] {
+        color: red;
+      }
+
+    </style>
+  </head>
+
+  <body class="foo">
+    <h1>My Files</h1>
+    <ul>
+      <li><a href="docs/resume.docx" pcs>resume.docx</a></li>
+      <li><a href="docs/anotherFile.doc" pcs="5">anotherFile.doc</a></li>
+      <li><a href="docs/myPresentation.doc.pptx">myPresentation.pptx</a></li>
+    </ul>
+  </body>
+
+</html>
