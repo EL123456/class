@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      nav ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        display: flex;
+        gap: 1em;
+        justify-content: space-evenly;
+      }
+
+      .columns {
+        display: flex;
+        gap: 1em;
+      }
+
+      .columns section {
+        flex: 1;
+      }
+
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .grid section {
+        border: 1px solid red;
+        flex: 1 1 10em;
+      }
+
+      .hasSidebar {
+        display: flex;
+        gap: 1em;
+
+        flex-direction: column;
+      }
+
+      @media screen and (min-width: 800px) {
+        .hasSidebar {
+          flex-direction: row;
+          /*display: flex;*/
+        }
+      }
+
+      .hasSidebar aside {
+        flex: 1 1 30%;
+      }
+
+      .hasSidebar section {
+        flex: 1 1 70%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Flexbox menu</h1>
+    <nav>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact us</a></li>
+        <li><a href="#">comments</a></li>
+      </ul>
+    </nav>
+
+    <article class="columns">
+      <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ex corporis nihil ut tenetur
+        excepturi illum rem voluptatem molestias totam, veniam, praesentium officiis facilis quos.</section>
+      <section>Tempora, fuga earum maxime laboriosam, molestias asperiores vel deserunt itaque aut quasi tenetur
+        corporis ea quo atque natus sunt quidem facilis nostrum aliquid laudantium inventore. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Delectus velit quos corporis hic excepturi blanditiis, pariatur veniam qui animi
+        saepe error debitis ipsa corrupti exercitationem, dolorum ab! Sequi id mollitia aliquam dicta debitis fuga quis
+        sunt. Ipsam necessitatibus molestiae sapiente reprehenderit, optio corrupti tempora soluta. Voluptas quis iusto
+        nulla nostrum?</section>
+      <section>Dolor aliquam necessitatibus doloribus atque consectetur eligendi omnis iure veritatis quis at
+        voluptatibus, consequatur distinctio architecto dolore velit praesentium eius consequuntur dignissimos! Odit,
+        quo eveniet!</section>
+    </article>
+
+    <article class="grid">
+      <section>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt omnis laboriosam ea sit et. Asperiores a
+        illum ad sint reiciendis aut porro nisi exercitationem quod!</section>
+      <section>Totam, nostrum enim maxime dolor expedita corporis, numquam earum, dicta quasi iusto nihil velit! A totam
+        hic impedit, doloremque minima placeat. Doloribus fugit animi blanditiis.</section>
+      <section>Voluptatum consequatur doloribus, omnis asperiores iure assumenda in maiores eveniet dolores, est ad
+        veniam quo dolor praesentium fuga rerum voluptate inventore modi fugit delectus maxime?</section>
+      <section>Asperiores voluptatibus optio ut, vitae dignissimos laudantium dolore perferendis quisquam repudiandae
+        reprehenderit et quam quia rerum fugiat ea qui ducimus provident similique possimus facilis autem!</section>
+      <section>Delectus necessitatibus eius expedita! Eaque corporis assumenda id eos repellat accusantium nobis dicta,
+        quidem nesciunt soluta enim, delectus aperiam esse inventore itaque, magni possimus quae.</section>
+    </article>
+
+    <article class="hasSidebar">
+      <aside>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores veritatis, expedita voluptates cum modi
+        consequuntur dolores fugiat placeat aliquid assumenda explicabo natus corrupti, sit quas?</aside>
+      <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto porro veniam rerum eaque id quia
+        asperiores assumenda iste in quas, voluptates ullam. Rem vitae recusandae veritatis exercitationem at! Modi
+        deleniti dolor eaque necessitatibus? At, esse aspernatur corporis porro ducimus assumenda fugiat optio nam ea
+        cupiditate, sint placeat repellendus totam explicabo unde magnam odio fugit nostrum vitae error perferendis!
+        Doloremque voluptates facilis eius id incidunt a nostrum. Officia praesentium nisi suscipit accusamus quaerat
+        animi impedit? Ipsam excepturi architecto recusandae magnam dolor iste aspernatur, suscipit aut libero illo
+        veniam, culpa, iure sint unde odit exercitationem saepe sapiente quidem. Hic odit sint aperiam quaerat quis
+        ullam voluptatum adipisci obcaecati aut ipsam cumque, quidem beatae cupiditate placeat eligendi. Doloribus,
+        libero? Quidem, atque fugiat esse amet tenetur doloribus veritatis magnam laborum voluptates dolorem fugit,
+        eaque, reiciendis vero. Natus reiciendis, voluptas aliquam magnam tempora voluptatibus, sequi vitae eveniet
+        ratione iste perspiciatis nam tempore ducimus magni laborum quaerat. Eveniet quas deserunt quibusdam ipsam,
+        molestias beatae voluptatibus dicta velit blanditiis corporis maiores incidunt neque natus at nostrum vel quod
+        dolores labore obcaecati? Laboriosam at ipsum velit, ad, vitae incidunt reprehenderit tempora necessitatibus,
+        quam repudiandae rem corrupti deserunt ab dolore! Culpa nihil tempore repellendus reiciendis debitis accusantium
+        deserunt ipsam eos, corrupti perspiciatis illum, quia suscipit sit vel dolore error excepturi voluptatem aliquid
+        iusto? Fuga tempora quas illo laboriosam at tempore molestiae eligendi sed? Nam quam quo repellat. Sed tenetur
+        velit cumque quia modi error impedit maiores commodi nihil minus beatae fugiat assumenda, libero iure dolore
+        molestiae ipsa nulla. Esse?</section>
+    </article>
+  </body>
+
+</html>

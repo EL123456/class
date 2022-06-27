@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      article {
+        border: 2px solid red;
+        /*overflow: auto;*/
+        display:
+          /*inline-flex*/
+          flex;
+        flex-direction:
+          /*column-reverse*/
+          row;
+        flex-wrap: wrap; /*nowrap*/;
+        justify-content:
+          /*space-evenly*/
+          /*space-around*/
+          center;
+        align-items:
+          /*stretch*/
+          /*center*/
+          /*flex-start*/
+          baseline;
+        height: 400px;
+        gap: 1em;
+      }
+
+      section {
+        border: 2px solid blue;
+        /*display: inline-block;*/
+        /*float: left;*/
+      }
+
+      section {
+        /*flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 10em;*/
+        /*flex: 1 1 10em;
+        flex: 1; /*1 1 0* /;
+        flex: 10em;
+        flex: 1 10em;
+        flex: 1 0;*/
+      }
+
+      section:nth-child(3) {
+        font-size: 1.5em;
+        /*align-self: flex-end;*/
+        flex-grow: 2; /*0*/
+        flex-shrink: 2;
+      }
+
+      .box {
+        background-color: yellow;
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        display: flex;
+        /*justify-content: center;
+        align-items: center;*/
+      }
+
+      .box p {
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Flexbox</h1>
+    </header>
+    <article>
+      <section>
+        <h1>1</h1>
+        <div>Im a flex box item</div>
+      </section>
+      <section>
+        <h1>2</h1>
+        <div>Im a flex box item Lorem ipsum dolor sit amet.</div>
+      </section>
+      <section>
+        <h1>3</h1>
+        <div>Im a flex box item</div>
+      </section>
+      <section>
+        <h1>4</h1>
+        <div>Im a flex box item</div>
+      </section>
+      <section>
+        <h1>5</h1>
+        <div>Im a flex box item</div>
+      </section>
+      <section>
+        <h1>6</h1>
+        <div>Im a flex box item</div>
+      </section>
+      <section>
+        <h1>7</h1>
+        <div>Im a flex box item</div>
+      </section>
+      <section>
+        <h1>8</h1>
+        <div>Im a flex box item</div>
+      </section>
+    </article>
+    <div class="box">
+      <p>Hi!</p>
+    </div>
+  </body>
+
+</html>

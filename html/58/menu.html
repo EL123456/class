@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCS Restaurant</title>
+    <link rel="stylesheet" href="css/restaurant.css">
+    <style>
+      article div {
+        text-transform: capitalize;
+      }
+
+      #copyright {
+        text-transform: uppercase;
+        font-style: italic;
+      }
+
+      .menu-item {
+        color: yellow;
+        /*clear: left;*/
+        /*height: 13em;*/
+        /*overflow: auto;*/
+        /*display: inline-block;*/
+        box-shadow: 2px 2px 2px 2px red;
+        margin-bottom: 1em;
+      }
+
+      .sale-item {
+        font-size: 1.5em;
+      }
+
+      .big-text {
+        font-size: 2em;
+      }
+
+      .error {
+        color: red;
+      }
+
+      .menu-item img {
+        float: left;
+        margin-right: 1em;
+        margin-bottom: 1em;
+      }
+
+      .menu-item::after {
+        content: '';
+        display: block;
+        clear: left;
+      }
+      /*.clear-fix {
+        clear:both;
+      }*/
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>PCS Restaurant</h1>
+      <img src="images/restaurant.jpg" alt="">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li> |
+          <li><a href="menu.html">Menu</a></li> |
+          <li><a href="about.html">About Us</a></li> |
+          <li><a href="https://www.google.com" target="_blank">Google</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <div class="error">sorry that item is sold out</div>
+      <div class="menu-item clear-fix">
+        <h2>Steak</h2>
+        <img src="images/steak.jpg" alt="yummy steak">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+      </div>
+      <div class="menu-item sale-item clear-fix">
+        <h2>Burger</h2>
+        <img src="images/burger.jpg" alt="delicious burger">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptate possimus, nobis sed ut magnam ipsam
+          officiis? Vero eos distinctio sint quod nisi, a labore doloribus iste voluptatum repellat voluptate!</p>
+      </div>
+    </article>
+    <div id="copyright" class="big-text clear-fix">
+      <h5>copyright &copy;PCS 2022</h5>
+    </div>
+  </body>
+
+</html>
