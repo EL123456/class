@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        gap: 1em;
+
+        /*grid-template-columns: 1fr 2fr;*/
+        grid-template-columns: [content-start] 1fr [content-end];
+      }
+
+      @media screen and (min-width: 600px) {
+        body {
+          /*display: grid;*/
+          /*grid-template-columns: 1fr 2fr;*/
+          grid-template-columns: 1fr [content-start] 2fr [content-end];
+        }
+
+        header,
+        footer {
+          grid-column: 1 / 3;
+        }
+      }
+
+      article {
+        grid-template-columns: content-start / content-end;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>header goes here Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, temporibus.
+    </header>
+    <aside>aside goes here Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, libero.</aside>
+    <article>article goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, minus! Nam
+      voluptatibus delectus aliquid molestiae saepe culpa eum atque quia laborum provident deserunt nostrum eligendi,
+      accusantium aperiam harum iste dolorem qui rerum vitae ullam consectetur obcaecati eius eaque quidem? Odio nobis
+      praesentium voluptate quibusdam, inventore illum quis impedit rem, fugit harum suscipit mollitia repellat fugiat
+      ducimus quod quae enim veniam est voluptatem maiores eum cupiditate consectetur perferendis! Magni hic inventore
+      laboriosam dolores sapiente odio nam nisi labore. A facilis amet cumque harum consequuntur atque sint libero
+      veritatis adipisci ducimus quam qui assumenda, ipsam, optio dolore officia modi ab, natus illum! Vel illum nulla,
+      odit magnam deleniti nam? Nam unde maiores aliquam, ex nemo fugit ea illo odio ut porro eum ab consectetur
+      praesentium adipisci distinctio officia suscipit aperiam tenetur aut. Pariatur inventore eveniet rem animi commodi
+      voluptate asperiores, officia, in sit magnam nostrum dignissimos, aut maiores ut facilis. Tempore quo nam eaque,
+      numquam pariatur quisquam nesciunt dicta molestias eum distinctio molestiae eligendi. Dolorem quasi sunt alias
+      exercitationem fugit, molestiae odit nisi officiis dolorum vel veniam ipsam earum eum perferendis accusamus ea
+      provident architecto dignissimos! Nisi distinctio consectetur iste, fugiat at quae veritatis recusandae possimus
+      neque laboriosam voluptate modi facere maxime.</article>
+    <footer>footer goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, incidunt!</footer>
+  </body>
+
+</html>
