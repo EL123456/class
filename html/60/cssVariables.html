@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      :root {
+        --main-bg-color: lightpink;
+        --alt-bg-color: lightgreen;
+        --def-padding: 2em;
+      }
+
+      header {
+        background-color: var(--main-bg-color);
+        padding: var(--def-padding);
+      }
+
+      article {
+        background-color: var(--main-bg-color);
+        padding: var(--def-padding);
+      }
+
+      aside {
+        background-color: var(--main-bg-color);
+        padding: var(--def-padding);
+      }
+
+      footer {
+        background-color: var(--alt-bg-color, lightblue);
+        padding: var(--def-padding);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>header</header>
+    <aside>aside</aside>
+    <article>article</article>
+    <footer>footer</footer>
+  </body>
+
+</html>

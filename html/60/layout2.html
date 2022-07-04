@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        padding: 2em;
+
+        display: grid;
+        gap: 2em;
+
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      body>* {
+        grid-column: 1 / -1;
+      }
+
+      @media screen and (min-width: 600px) {
+        nav ul {
+          display: flex;
+          justify-content: space-around;
+        }
+
+        aside {
+          grid-column: 1 / span 3;
+          grid-row: 3;
+        }
+
+        article {
+          grid-column: 4 / -1;
+          grid-row: 3;
+        }
+
+        .ad {
+          grid-column: 1 / span 3;
+          grid-row: 4;
+        }
+
+        footer {
+          grid-column: 4 / -1;
+          grid-row: 4;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        nav {
+          grid-row: 2;
+          grid-column: 1 / span 2;
+        }
+
+        nav ul {
+          flex-direction: column;
+        }
+
+        article {
+          grid-row: 2 / span 2;
+          grid-column: 3 / span 8;
+        }
+
+        aside {
+          grid-row: 2;
+          grid-column: 11 / -1;
+        }
+
+        .ad {
+          grid-row: 3;
+          grid-column: 11 / -1;
+        }
+
+        footer {
+          grid-column: 1 / -1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>Header goes here</header>
+    <nav>
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </nav>
+    <article>
+      <h1>Main content goes here</h1>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere quidem rerum debitis iure aperiam excepturi alias
+      fugiat minima quas aut! Voluptates assumenda doloremque voluptate fuga consequatur neque temporibus quam quas
+      tempora officiis, nihil dicta molestiae vel maiores sed eveniet amet accusamus asperiores totam! Laboriosam id
+      impedit beatae aliquam earum maxime placeat necessitatibus natus asperiores mollitia saepe iste laborum sint
+      dolorem nobis, eos odio officia praesentium aut consequatur suscipit dicta perspiciatis atque. Ut fuga id unde
+      sint praesentium vitae, maiores quisquam, sunt architecto eveniet non. Quibusdam in repellat magni veniam fugiat?
+      Saepe ea quaerat eius reprehenderit beatae sed? Fugit rerum molestias sit? Sed cumque, nisi recusandae libero
+      perferendis ab similique nihil architecto quod omnis non quisquam, soluta repellat nostrum. Asperiores vitae eius
+      esse qui corrupti! Natus eligendi velit voluptas architecto error, necessitatibus possimus repudiandae?
+    </article>
+    <aside>
+      aside - Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit neque consequuntur expedita repellat assumenda
+    </aside>
+    <div class="ad">
+      ad goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat optio deleniti provident ipsum quos
+      id, praesentium harum numquam vero iusto!
+    </div>
+    <footer>footer goes here</footer>
+  </body>
+
+</html>
