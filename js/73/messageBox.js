@@ -1,3 +1,3 @@
 function showMessageBox(msg) {
-  console.log(msg);
+  alert(msg);
 }
