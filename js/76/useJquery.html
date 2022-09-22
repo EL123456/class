@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      .hover {
+        background-color: yellow
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="joe">Joe Biden</h1>
+    <h1 id="kamala">Kamala Harris</h1>
+
+    <hr>
+
+    name: <input id="name">
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+      // (function ($) {
+
+      const joe = /*jQuery*/$('#joe')
+        .css('color', 'red')
+        .click(event => console.log('joe was clicked!', event))
+        // .flash(5000, 250)
+        .hide();
+
+      setTimeout(() => joe.show(), 2000);
+
+        /*jQuery*/$('#kamala')
+        // .flash(5000, 'medium')
+        .click(() => console.log('Kamala was clicked'));
+
+      setTimeout(() => {
+        console.log('using $');
+        $('h1').click(() => console.log('an h1 was clicked'));
+      }, 10000);
+
+      const theNameInput = $('#name');
+      theNameInput.change(e => {
+        console.log('input changed', e);
+
+        console.log(theNameInput.val());
+      });
+
+      const nothing = $('.foo');
+      nothing.click(() => console.log('a nothing was clicked'));
+
+      theNameInput
+        .mouseenter(function() {
+          // theNameInput.css('background-color', 'yellow');
+          console.log(this, $(this));
+        })
+        /*.mouseleave(() => {
+          theNameInput.css('background-color', 'white');
+        });*/
+        .hover(
+          // () => theNameInput.css('background-color', 'yellow'),
+          // () => theNameInput.css('background-color', 'white')
+          () => theNameInput.addClass('hover'),
+          () => theNameInput.removeClass('hover')
+        )
+
+      // }(jQuery));
+
+    </script>
+  </body>
+
+</html>
