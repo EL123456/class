@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1 id="joe">Joe Biden</h1>
+    <h1 id="kamala">Kamala Harris</h1>
+
+    <script src="pcsTools.js"></script>
+    <script>
+      //const joe = app.pcsTools.get('#joe');
+      //app.pcsTools.setCss(joe, 'color', 'red');
+
+      //const j = document.querySelector('#joe');
+      //j.style.color = 'red';
+
+      /*const joe = app.pcsTools.wrap('#joe');
+      joe.setCss('color', 'red');
+      console.log(joe.getCss('color'));*/
+
+      /*const joe = app.pcsTools.wrap('#joe');
+      joe.css('color', 'red');
+      console.log(joe.css('color'));
+
+      console.log(joe.css('color', undefined));
+
+      joe.click(event => console.log('joe was clicked!', event));
+
+      joe.hide();*/
+
+      const joe = pcs('#joe')
+                    .css('color', 'red')
+                    .click(event => {
+                      let currentClickCount = (joe.data('clickCount') || 0) + 1;
+                      console.log(`joe was clicked ${currentClickCount} times`, event);
+                      joe.data('clickCount', (currentClickCount));
+                    })
+                    .flash(5000, 250)
+                    // .data('clickCount', 0)
+                    .hide();
+
+
+      setTimeout(() => joe.show(), 2000);
+
+      const kamala = pcs('#kamala')
+        .flash(5000, 'medium')
+        .click(event => {
+          let currentClickCount = (kamala.data('clickCount') || 0) + 1;
+          console.log(`kamala was clicked ${currentClickCount} times`, event);
+          kamala.data('clickCount', (currentClickCount));
+        });
+
+      const kamala2 = pcs('#kamala')
+        .css('background-color', 'pink')
+        .data('innerHTML', '<button>Click Me!</button>');
+
+      setInterval(() => {
+        console.log(`timeout - kamala was clicked ${kamala2.data('clickCount')} times`, kamala2.data('innerHTML'));
+      }, 1000);
+    </script>
+  </body>
+
+</html>
