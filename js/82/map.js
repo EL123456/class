@@ -57,6 +57,7 @@
   map.addListener('center_changed', () => {
     const newCenter = map.getCenter();
     console.log('center changed', newCenter.lat(), newCenter.lng());
+    panorama.setPosition(newCenter);
   });
 
   const bounds = new google.maps.LatLngBounds();
@@ -69,7 +70,7 @@
     //map.panTo(bmgLoc);
   }, 2000);
 
-  /*const panorama = new google.maps.StreetViewPanorama(
+  const panorama = new google.maps.StreetViewPanorama(
     document.getElementById("pano"),
     {
       position: bmgLoc,
@@ -80,6 +81,6 @@
     }
   );
 
-  map.setStreetView(panorama);*/
+  //map.setStreetView(panorama);
   //}
 }());
